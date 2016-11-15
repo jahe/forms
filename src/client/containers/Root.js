@@ -4,8 +4,7 @@ import {IntlProvider} from 'react-intl';
 // Import Redux Store Provider Component
 import {Provider} from 'react-redux';
 
-// Import our Component
-import HelloWorld from '../components/HelloWorld.js';
+import MainPage from '../components/MainPage.js';
 
 export default class Root extends React.Component {
   constructor(props) {
@@ -24,7 +23,7 @@ export default class Root extends React.Component {
       <IntlProvider locale={language} key={language} messages={messages}>
         <Provider store={this.props.store}>
           <div>
-            <HelloWorld/>
+            <MainPage />
             <select value={language} onChange={({target: {value}}) => this.setState({language: value})}>
               <option value="de">Deutsch</option>
               <option value="en">English</option>
